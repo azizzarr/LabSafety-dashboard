@@ -1,0 +1,50 @@
+.home-page {
+  width: 100%;
+  flex: 1;
+  background-color: rgb(42, 96, 204);
+  height: 100vh;
+  justify-content: center;
+
+
+  .img-container {
+    max-height: 50vh;
+    max-width: 90vw;
+    opacity: .6;
+    flex-grow: 1;
+    img{
+      height:100%;
+    }
+  }
+
+  button {
+    margin-top: 30px;
+    padding: 8px 16px;
+    box-shadow: 3px 7px 12px 6px rgba(189, 189, 189, 0.32);
+    border-radius: 6px;
+
+    border: 1px solid #dad9d9;
+    background-color: rgb(241, 241, 241);
+    font-size: 26px;
+    color: rgb(64, 64, 64);
+    transition: background-color .3s;
+    margin-bottom: 40px;
+
+    &:hover {
+      background-color: white;
+      box-shadow: 3px 7px 12px 6px rgba(155, 154, 154, 0.32);
+    }
+  }
+
+
+  h1 {
+    font-size: 15vw;
+    color: #303030;
+
+    img {
+      width: 12.5vw;
+      height: 9vw;
+      transform: translateY(.8vw);
+      object-fit: cover;
+    }
+  }
+}

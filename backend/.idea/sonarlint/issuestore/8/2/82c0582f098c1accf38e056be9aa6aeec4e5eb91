@@ -1,0 +1,20 @@
+
+c	java:S112¢"FDefine and throw a dedicated exception instead of using a generic one.(ºĞãù8•ô´‹2
+i
+java:S1192²"FDefine a constant instead of duplicating this literal "</td>" 5 times.(­Ã° ùÿÿÿÿ8 ô´‹2
+i
+java:S1192³"FDefine a constant instead of duplicating this literal "</tr>" 5 times.(¬…Îáıÿÿÿÿ8 ô´‹2
+o
+java:S1192â"QDefine a constant instead of duplicating this literal "    color: #fff;" 3 times.(ŠŒº±8¡ô´‹2
+j
+java:S1192«"GDefine a constant instead of duplicating this literal "</div>" 5 times.(ğöØçıÿÿÿÿ8¢ô´‹2
+X	java:S1256"<This block of commented-out lines of code should be removed.(¹Çˆ8©ş´‹2
+v
+java:S2139 "XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8©ÿ´‹2
+Y	java:S125Œ"<This block of commented-out lines of code should be removed.(¬º¶«8ıœş1
+Y	java:S125¨"<This block of commented-out lines of code should be removed.(Åßö 8‘‘œş1
+X	java:S125Ç"<This block of commented-out lines of code should be removed.(¬øën8Ç€‘´‹2
+c
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Sort'.(ëÿ€ëøÿÿÿÿ8Õ€‘´‹2
+[
+java:S1144÷"8Remove this unused private "calculatePercentage" method.(Ù¥øßşÿÿÿÿ8¦‘œş1

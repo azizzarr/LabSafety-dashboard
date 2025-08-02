@@ -1,0 +1,6 @@
+
+t	java:S116"SRename this field "WorkerId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°óóÖúÿÿÿÿ8çÕò‚2
+]	java:S125-"<This block of commented-out lines of code should be removed.(µË¾ªüÿÿÿÿ8êÕò‚2
+]	java:S125<"<This block of commented-out lines of code should be removed.(—®Ëåıÿÿÿÿ8ëÕò‚2
+R
+java:S1128	"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8íÕò‚2

@@ -1,0 +1,22 @@
+
+Z	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(’©½f
+[	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(÷ÿ÷
+`	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(­ïÚ±ýÿÿÿÿ
+u
+java:S1192b"ZDefine a constant instead of duplicating this literal "Error: Role is not found." 4 times.(ÉÿÊ–ùÿÿÿÿ
+>
+java:S5411D"(Use a primitive boolean expression here.(ƒåº
+>
+java:S5411J"(Use a primitive boolean expression here.(Œ‰ÓŒ
+<
+java:S14525"&Remove usage of generic wildcard type.(÷ÿ÷
+A
+java:S1452C"&Remove usage of generic wildcard type.(éã°éúÿÿÿÿ
+=
+java:S1452‚"&Remove usage of generic wildcard type.(ê×þè
+H
+java:S3599ˆ",Use another way to initialize this instance.(ÙÝÏëøÿÿÿÿ
+u
+java:S1171ˆ"YMove the contents of this initializer to a standard constructor or to field initializers.(ÙÝÏëøÿÿÿÿ
+S
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ

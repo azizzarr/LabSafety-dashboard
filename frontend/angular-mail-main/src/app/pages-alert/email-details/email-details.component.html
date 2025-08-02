@@ -1,0 +1,29 @@
+<section class="email-details full-height flex justify-center align-center" *ngIf="email">
+  <div class="details-card">
+    <header class="details-header">
+      <div class="header-content flex justify-between align-center">
+        <div class="status-indicator" [ngClass]="{
+            'status-warning': email!.status === 'Warning',
+            'status-danger': email!.status === 'Danger'
+        }">{{ email!.status }}</div>
+        <h2 class="email-title">{{ email.title }}</h2>
+        <span class="email-timestamp">{{ email.timestamp | date:'fullDate' }} {{ email.timestamp | date:'shortTime' }}</span>
+      </div>
+    </header>
+    <main class="details-body flex">
+      <img class="user-img" src="assets/img/user.png" alt="User Image">
+      <div class="email-content">
+        <div class="email-info">
+          <h4>Matricule: <span>{{ email.Matricule }}</span></h4>
+        </div>
+        <p class="email-message">{{ email.message }}</p>
+        <a (click)="redirectToFlaskApp()" class="styled-link">see alert prediction</a>
+      </div>
+    </main>
+    <footer class="details-footer">
+      <button class="reply-btn">Reply</button>
+      <button class="forward-btn">Forward</button>
+      <button class="delete-btn">Delete</button>
+    </footer>
+  </div>
+</section>

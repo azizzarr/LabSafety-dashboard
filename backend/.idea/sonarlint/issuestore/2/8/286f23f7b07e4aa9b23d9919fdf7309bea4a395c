@@ -1,0 +1,55 @@
+
+n
+java:S1192ò"WDefine a constant instead of duplicating this literal "Token is null or empty" 4 times.(ëùœ
+
+java:S1192½"hDefine a constant instead of duplicating this literal "An error occurred while adding the user" 3 times.(û­©
+‹
+java:S1192±"oDefine a constant instead of duplicating this literal "User does not have the permission to add users" 3 times.(­›´Íıÿÿÿÿ
+k
+java:S1192—"ODefine a constant instead of duplicating this literal "permissionName" 5 times.(­òÒ¦ÿÿÿÿÿ
+k
+java:S1192»"ODefine a constant instead of duplicating this literal "User not found" 4 times.(¬»¹©ÿÿÿÿÿ
+o
+java:S1192¹"XDefine a constant instead of duplicating this literal "Invalid permission name" 3 times.(Ü²§»
+t
+java:S1192·"XDefine a constant instead of duplicating this literal "User added successfully" 3 times.(£¤·›øÿÿÿÿ
+w
+java:S1488ã"`Immediately return this expression instead of assigning it to the temporary variable "response".(¯›Âä
+[
+java:S4684="@Replace this persistent entity with a simple POJO or DTO object.(…‘ËÁşÿÿÿÿ
+V	java:S125A"<This block of commented-out lines of code should be removed.(›·¤áşÿÿÿÿ
+[
+java:S4684\"@Replace this persistent entity with a simple POJO or DTO object.(Ÿ†‰µûÿÿÿÿ
+V	java:S125c"<This block of commented-out lines of code should be removed.(³À¶Ëøÿÿÿÿ
+V
+java:S4684v"@Replace this persistent entity with a simple POJO or DTO object.(™†ÏÇ
+R	java:S125‰"<This block of commented-out lines of code should be removed.(£ŞùÄ
+U
+java:S1854ß"9Remove this useless assignment to local variable "users".(åËÑÒùÿÿÿÿ
+X
+java:S1075İ"ARefactor your code to get this URI from a customizable parameter.(¿£ÅÊ
+F
+java:S1481ß"*Remove this unused "users" local variable.(åËÑÒùÿÿÿÿ
+Q	java:S125á"<This block of commented-out lines of code should be removed.(À™Ú*
+R	java:S125ì"<This block of commented-out lines of code should be removed.(Şª¦Ü
+]
+java:S1075÷"ARefactor your code to get this URI from a customizable parameter.(îÒ“Êøÿÿÿÿ
+Q
+java:S1854¡":Remove this useless assignment to local variable "writer".(–…—„
+B
+java:S1481¡"+Remove this unused "writer" local variable.(–…—„
+Q
+java:S1117ê":Rename "logger" which hides the field declared at line 53.(¶È§“
+\
+java:S1117œ"@Rename "objectMapper" which hides the field declared at line 54.(¡ôó‰ùÿÿÿÿ
+Q	java:S125²"<This block of commented-out lines of code should be removed.(ûôŠ
+Q
+java:S1117ò":Rename "logger" which hides the field declared at line 53.(Úƒó¶
+l
+java:S1128"VRemove this unused import 'org.springframework.security.core.userdetails.UserDetails'.(ÊÁ¥
+g
+java:S1128"LRemove this unused import 'org.springframework.web.multipart.MultipartFile'.(ôŸœÿÿÿÿÿ
+U
+java:S1128":Remove this unused import 'tn.esprit.entities.Permission'.(ğ«éåıÿÿÿÿ
+J
+java:S1128'"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ

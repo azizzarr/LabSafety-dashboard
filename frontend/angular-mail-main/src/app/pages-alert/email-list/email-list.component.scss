@@ -1,0 +1,133 @@
+@import '../../../assets/style/setup/vars';
+
+$email-list-bg-color: rgb(252, 250, 250); // Define your color variable
+
+.email-list {
+  border-radius: 16px;
+  $marginBottom: 16px;
+  margin-bottom: $marginBottom;
+  background-color: $email-list-bg-color;
+  height: 100%;
+
+  .list-content {
+    overflow-y: scroll;
+    height: 200px;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 16px;
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, .2);
+      -webkit-box-shadow: inset 1px 1px 0px rgb(0 0 0 / 10%), inset 0px -1px 0px rgb(0 0 0 / 7%);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, .4);
+        cursor: default;
+      }
+    }
+  }
+
+  .list-header {
+    height: 48px;
+    padding: 4px 16px;
+    padding-inline-end: 2px;
+
+    .sub1 {
+      input {
+        // margin-inline-end: 10px;
+        color: #fdfcfc;
+      }
+    }
+
+    .paging-wrapper {
+      .paging-counter {
+        font-size: 12px;
+        margin-inline-end: 12px;
+      }
+
+      span {
+        padding-top: 1px;
+        color: #eeeaea;
+      }
+
+      button {
+        background-color: inherit;
+        border: 0;
+        &:disabled{
+          opacity:.5;
+          cursor:default;
+        }
+      }
+    }
+  }
+
+  .list-item { // Assuming this is the class for individual list items
+    background-color: $email-list-bg-color; // Set the background color for list items
+
+    &:hover {
+      background-color: darken($email-list-bg-color, 10%); // Optional: change color on hover
+    }
+
+    .icon-wrapper,
+    .icon-wrapper1,
+    .input-wrapper {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        color: #444;
+      }
+    }
+
+    .img-wrapper {
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 3px;
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .input-wrapper {
+      width: 25px;
+      height: 25px;
+      margin-inline-end: 20px;
+    }
+
+    .icon-wrapper1 {
+      i {
+        color: #f1efef;
+      }
+    }
+  }
+
+  .not-found {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 90%;
+    margin: auto;
+  }
+}

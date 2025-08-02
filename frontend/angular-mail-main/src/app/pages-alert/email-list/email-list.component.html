@@ -1,0 +1,15 @@
+<section class="email-list flex column">
+  <section class="grow list-content">
+    <div *ngFor="let email of (emails$ | async)" class="email-item" (click)="viewEmailDetails(email)">
+      <div class="email-info">
+        <email-preview [email]="email"
+                       (toggleCheckbox)="toggleCheckbox($event)"
+                       (toggleTab)="toggleTab($event)">
+        </email-preview>
+      </div>
+    </div>
+    <div class="not-found" *ngIf="(emails$ | async)?.length === 0">
+      <span>No messages matched your search.</span>
+    </div>
+  </section>
+</section>

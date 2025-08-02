@@ -1,0 +1,40 @@
+
+\	java:S112¶"FDefine and throw a dedicated exception instead of using a generic one.(£«ä‹
+\	java:S112Á"FDefine and throw a dedicated exception instead of using a generic one.(Â·ì
+\	java:S112Ì"FDefine and throw a dedicated exception instead of using a generic one.(Â–À
+v
+java:S1192£"_Define a constant instead of duplicating this literal "User not found with username: " 3 times.(ŞÎ¸
+e
+java:S1192d"ODefine a constant instead of duplicating this literal "User not found" 4 times.(–ûƒ§
+y
+java:S1488€"bImmediately return this expression instead of assigning it to the temporary variable "savedUsers".(Ó§Áæ
+]
+java:S2789µ"FEnsure this "Optional" could never be null and remove this null-check.(ªÀÎÛ
+\
+java:S2789À"FEnsure this "Optional" could never be null and remove this null-check.(íßÀ
+b
+java:S2789Ë"FEnsure this "Optional" could never be null and remove this null-check.(ãı™½úÿÿÿÿ
+V	java:S125T"<This block of commented-out lines of code should be removed.(´¡ƒìùÿÿÿÿ
+P	java:S125p"<This block of commented-out lines of code should be removed.(œÀÎ'
+Z
+java:S1854½">Remove this useless assignment to local variable "permission".(ïâ¡Æùÿÿÿÿ
+K
+java:S1481½"/Remove this unused "permission" local variable.(ïâ¡Æùÿÿÿÿ
+Z
+java:S1854ı">Remove this useless assignment to local variable "permission".(ïâ¡Æùÿÿÿÿ
+W	java:S125Ô"<This block of commented-out lines of code should be removed.(³÷¢ˆûÿÿÿÿ
+W	java:S125å"<This block of commented-out lines of code should be removed.(³÷¢ˆûÿÿÿÿ
+K
+java:S1481ı"/Remove this unused "permission" local variable.(ïâ¡Æùÿÿÿÿ
+A	java:S106Ü"+Replace this use of System.out by a logger.(Äâ´­
+F	java:S106ã"+Replace this use of System.out by a logger.(í•·Êüÿÿÿÿ
+W	java:S125ˆ"<This block of commented-out lines of code should be removed.(¶şå•şÿÿÿÿ
+Q	java:S125ç"<This block of commented-out lines of code should be removed.(Ó§°}
+R
+java:S1117"<Rename "jwtUtils" which hides the field declared at line 50.(ªÌ§P
+A	java:S106’"+Replace this use of System.err by a logger.( ê†¡
+W	java:S125İ"<This block of commented-out lines of code should be removed.(İÀ´àıÿÿÿÿ
+W	java:S125ì"<This block of commented-out lines of code should be removed.(êï÷åüÿÿÿÿ
+R	java:S125÷"<This block of commented-out lines of code should be removed.(ğ³Ö
+@
+java:S1068&"*Remove this unused "logger" private field.(È½ÓÉ

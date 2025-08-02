@@ -1,0 +1,19 @@
+
+a	java:S112="FDefine and throw a dedicated exception instead of using a generic one.(’©½f8ËæÌ¶à1
+b	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(÷ÿ÷8ÌæÌ¶à1
+|
+java:S1192]"ZDefine a constant instead of duplicating this literal "Error: Role is not found." 4 times.(ÉÿÊ–ùÿÿÿÿ8ÌæÌ¶à1
+E
+java:S5411G"(Use a primitive boolean expression here.(ƒåº8ĞæÌ¶à1
+E
+java:S5411M"(Use a primitive boolean expression here.(Œ‰ÓŒ8ĞæÌ¶à1
+C
+java:S14528"&Remove usage of generic wildcard type.(÷ÿ÷8âæÌ¶à1
+H
+java:S1452F"&Remove usage of generic wildcard type.(éã°éúÿÿÿÿ8éæÌ¶à1
+C
+java:S1452}"&Remove usage of generic wildcard type.(ê×şè8óæÌ¶à1
+O
+java:S3599ƒ",Use another way to initialize this instance.(ÙİÏëøÿÿÿÿ8öæÌ¶à1
+|
+java:S1171ƒ"YMove the contents of this initializer to a standard constructor or to field initializers.(ÙİÏëøÿÿÿÿ8÷æÌ¶à1

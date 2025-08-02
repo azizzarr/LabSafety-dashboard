@@ -1,0 +1,112 @@
+<div class="container-fluid h-100">
+  <div class="row h-100 align-items-center justify-content-center">
+    <div class="col-md-12 col-lg-8 col-xxxl-8">
+      <nb-card>
+        <nb-card-body>
+          <nb-stepper #stepper>
+            <nb-step [stepControl]="firstForm" label="Modify User">
+              <form [formGroup]="firstForm" class="step-container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <nb-card>
+                      <nb-card-header>User Update</nb-card-header>
+                      <nb-card-body>
+                        <div class="form-group row">
+                          <label for="inputUsername" class="label col-sm-3 col-form-label">Username</label>
+                          <div class="col-sm-9">
+                            <input type="text" nbInput fullWidth id="inputUsername" class="form-control" placeholder="Enter username" formControlName="userName">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputPhone" class="label col-sm-3 col-form-label">Phone number</label>
+                          <div class="col-sm-9">
+                            <input type="text" nbInput fullWidth id="inputPhone" class="form-control" placeholder="Enter your phone number" formControlName="phone"
+                                   [ngClass]="{'form-control-danger': firstForm.get('phone').invalid && (firstForm.get('phone').dirty || firstForm.get('phone').touched)}">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputEmail" class="label col-sm-3 col-form-label">Email</label>
+                          <div class="col-sm-9">
+                            <input type="email" nbInput fullWidth id="inputEmail" placeholder="Enter email" class="form-control" formControlName="email"
+                                   [ngClass]="{'form-control-danger': firstForm.get('email').invalid && (firstForm.get('email').dirty || firstForm.get('email').touched)}">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputPassword2" class="label col-sm-3 col-form-label">Password</label>
+                          <div class="col-sm-9">
+                            <input type="password" nbInput fullWidth id="inputPassword2" class="form-control" placeholder="Password" formControlName="password">
+                          </div>
+                        </div>
+                      </nb-card-body>
+                    </nb-card>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- Insert the calendar component here -->
+                    <div class="calendars">
+                      <div class="calendar-container">
+                        <span class="subtitle">Selected date: {{ user.birthDate | date }}</span>
+                        <nb-calendar [(date)]="user.birthDate" [boundingMonth]="true" showWeekNumber (dateChange)="onDateSelect($event)"></nb-calendar>
+                      </div>
+                    </div>
+                    <!-- Insert the roles checkbox group here -->
+                    <nb-card>
+                      <nb-card-header>Roles</nb-card-header>
+                      <nb-card-body>
+                        <div class="form-group">
+                          <div *ngFor="let role of roles; let i = index">
+                            <div class="form-check">
+                              <div class="checkbox-wrapper-31">
+                                <input type="checkbox" [id]="'role-' + i" [value]="role.name" [checked]="role.selected" (change)="toggleRole(i)">
+                                <svg viewBox="0 0 35.6 35.6">
+                                  <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                                  <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                                  <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                                </svg>
+                                <label [for]="'role-' + i">{{ role.name }}</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </nb-card-body>
+                    </nb-card>
+                  </div>
+                </div>
+                <!-- Change type to button and handle form submission for Next button -->
+               <button type="submit" class="button" (click)="onSubmit()">
+                  <span class="button-content">Next</span>
+                </button>
+              </form>
+            </nb-step>
+            <nb-step [stepControl]="secondForm" label="Permissions">
+              <form [formGroup]="secondForm" (ngSubmit)="onSecondSubmit()" class="step-container">
+                <div class="row">
+                  <!-- First Column -->
+                  <div class="col-md-6" *ngFor="let category of permissions">
+                    <div class="permission-category">
+                      <h3>{{ category.category }}</h3>
+                      <div class="permission" *ngFor="let permission of category.permissions">
+                        <label class="switch">
+                          <input type="checkbox" [checked]="permission.value" (change)="togglePermission(permission)">
+                          <span class="slider"></span>
+                        </label>
+                        <span>{{ permission.name }}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <button nbButton nbStepperPrevious type="button" class="button">
+                  <span class="button-content">Prev</span>
+                </button>
+                <button type="button" class="button">
+                  <span class="button-content" routerLink="../smart-table">Save</span>
+                </button>
+              </form>
+            </nb-step>
+
+          </nb-stepper>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+</div>

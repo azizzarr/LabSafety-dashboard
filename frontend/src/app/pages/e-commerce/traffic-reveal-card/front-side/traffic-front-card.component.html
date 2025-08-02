@@ -1,0 +1,52 @@
+<!--<<nb-list>
+  <nb-list-item class="item" *ngFor="let item of frontCardData; trackBy: trackByDate">
+    <span>{{ item.date }}</span>
+    <span>{{ item.value }}</span>
+    <span class="delta" [class.up]="item.delta.up" [class.down]="!item.delta.up">
+      <nb-icon [icon]="item.delta.up ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+      {{ item.delta.value }}%
+    </span>
+    <ngx-traffic-bar [barData]="item.comparison" [successDelta]="item.delta.up">
+    </ngx-traffic-bar>
+  </nb-list-item>
+</nb-list>-->
+<ng-container *ngIf="daysWithData">
+  <div class="table-container">
+    <table class="table">
+      <thead>
+      <tr class="header-row">
+        <th>Date</th>
+        <th>Workers Count</th>
+        <th>Average Charge Esd</th>
+        <th> </th>
+        <th>Change</th>
+        <th>Previous Day</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of daysWithData; trackBy: trackByDate" [ngClass]="{ 'hover-effect': true }">
+        <td>{{ item.date }}</td>
+        <td>{{ item.workersCount }}</td>
+        <td>{{ item.averageChargeEsd }}</td>
+        <td>
+          <button class="Btn" [ngClass]="{ 'lower-btn': item.change.includes('LOWER') }">
+            <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+              <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+            </svg>
+            <p class="text">Back to Top</p>
+          </button>
+        </td>
+        <td [ngClass]="{ 'more': item.change.includes('MORE'), 'lower': item.change.includes('LOWER') }">
+          {{ item.change }}
+        </td>
+        <td>{{ item.prevDay }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+
+
+
+
+

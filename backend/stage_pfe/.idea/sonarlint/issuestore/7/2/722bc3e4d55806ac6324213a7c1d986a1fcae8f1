@@ -1,0 +1,9 @@
+
+D
+java:S1948H"'Make "roles" transient or serializable.(öö¤8ÀóĞ¶à1
+S
+java:S1948S"1Make "userPermissions" transient or serializable.(—è¥ıÿÿÿÿ8ÀóĞ¶à1
+X	java:S1251"<This block of commented-out lines of code should be removed.(øõı±8ÂóĞ¶à1
+X	java:S125K"<This block of commented-out lines of code should be removed.(úÌ¸8ÄóĞ¶à1
+e
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(ş‘‹„8ÄóĞ¶à1

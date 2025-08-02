@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "paths": {
+      "angular-mail-main": [
+        "dist/angular-mail-main"
+      ],
+      "angular-mail-main1": [
+        "dist/angular-mail-main1"
+      ]
+    },
+    "importHelpers": true,
+    "module": "es2020",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "target": "ES2022",
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "plugins": [
+      {
+        "name": "tslint-language-service"
+      }
+    ],
+    "useDefineForClassFields": false
+  },
+  "include": [
+    "src/**/*.ts",
+    "projects/angular-mail-main/src/**/*.ts"
+  ]
+}

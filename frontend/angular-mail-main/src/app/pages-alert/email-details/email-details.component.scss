@@ -1,0 +1,178 @@
+.email-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #bdb9b9;
+  min-height: 100vh;
+
+  .details-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    width: 1200px;
+    margin: 2px auto 300px; /* Adjusted margin to center vertically and provide space from top */
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .details-header {
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 20px;
+      margin-bottom: 20px; /* Reduced margin bottom for more compact look */
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .email-title {
+          font-size: 28px;
+          font-weight: 700;
+          color: #333;
+          text-transform: capitalize;
+        }
+
+        .email-timestamp {
+          font-size: 14px;
+          color: #888;
+        }
+      }
+    }
+
+    .details-body {
+      display: flex;
+      align-items: flex-start;
+
+      .user-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 3px solid #ddd;
+      }
+
+      .email-content {
+        flex-grow: 1;
+
+        .email-info {
+          margin-bottom: 20px;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #555;
+
+            span {
+              font-weight: 400;
+              color: #333;
+            }
+          }
+        }
+
+        .email-message {
+          font-size: 16px;
+          color: #333;
+          line-height: 1.8;
+          background: #f9f9f9;
+          padding: 20px;
+          border-radius: 8px;
+          border-left: 4px solid #007bff;
+        }
+      }
+    }
+
+    .details-footer {
+      display: flex;
+      gap: 15px;
+      padding-top: 20px;
+      justify-content: flex-end;
+
+      button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        padding: 0 20px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+
+        &.reply-btn {
+          background-color: #28a745;
+
+          &:hover {
+            background-color: #218838;
+          }
+        }
+
+        &.forward-btn {
+          background-color: #ffc107;
+
+          &:hover {
+            background-color: #e0a800;
+          }
+        }
+
+        &.delete-btn {
+          background-color: #dc3545;
+
+          &:hover {
+            background-color: #c82333;
+          }
+        }
+      }
+    }
+    .status-indicator {
+      width: 80px; /* Adjust width of status indicator */
+      height: 24px; /* Adjust height of status indicator */
+      line-height: 24px; /* Center status text vertically */
+      text-align: center; /* Center text horizontally */
+      border-radius: 4px; /* Rounded corners */
+      font-weight: bold; /* Make status text bold */
+      margin-right: 20px; /* Spacing between indicator and details */
+    }
+
+    .status-warning {
+      color: orange; /* Set text color to orange for Warning status */
+      background-color: rgba(255, 165, 0, 0.2); /* Light orange background */
+    }
+
+    .status-danger {
+      color: red; /* Set text color to red for Danger status */
+      background-color: rgba(255, 0, 0, 0.2); /* Light red background */
+    }
+  }
+  .styled-link {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  .styled-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+}

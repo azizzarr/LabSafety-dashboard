@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Demande De Stage</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align: center;">Demande de Stage</h1>
+
+    <p>Tunis, le:<p th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"></p></p>
+
+    <p>Madame, Monsieur,<br>
+
+        L’Ecole Supérieure Privée d’Ingénierie et de Technologies, ESPRIT SA, est un établissement d’enseignement supérieur privé ayant pour objet principal, la formation d’ingénieurs dans les domaines des technologies de l’information et de la communication.
+
+        Notre objectif consiste à former des ingénieurs opérationnels au terme de leur formation.<br>
+
+        Dès lors, nous encourageons nos élèves à mettre en pratique le savoir et les compétences qu’ils ont acquis au cours de leur cursus universitaire.<br>
+
+        C’est également dans le but de les amener à s’intégrer dans l’environnement de l’entreprise que nous vous demandons de bien vouloir accepter :<br>
+
+        L’étudiant(e) :  <strong th:text="${student.firstname}"></strong>  <strong th:text="${student.lastname}"></strong> <br>
+        Inscrit(e) en :  Label<br>
+
+        Pour effectuer un stage obligatoire, au sein de votre honorable société.<br>
+
+        Nous restons à votre entière disposition pour tout renseignement complémentaire.<br>
+
+        En vous remerciant pour votre précieux soutien, nous vous prions d’agréer, Madame, Monsieur, l’expression de nos salutations distinguées. </p>
+    <div style="text-align: right; margin-top: 40px;">
+        <p>Signature du Responsable</p><br>
+        <img align="center" border="0" src="https://jaoguinee.com/archive/wp-content/uploads/2022/05/cachet-Directeur-General.jpg" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 55%;max-width: 319px;" width="319" class="v-src-width v-src-max-width"/>
+
+    </div>
+
+
+</div>
+</body>
+</html>

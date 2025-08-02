@@ -1,0 +1,327 @@
+@import '../../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  .card {
+    width: 800px;
+    height: 310px;
+    border-radius: 20px;
+    background: #1b233d;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card .top-section {
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, rgb(4, 159, 187) 0%, rgb(80, 246, 255) 100%);
+    position: relative;
+  }
+
+  .card .top-section .border {
+    border-bottom-right-radius: 10px;
+    height: 30px;
+    width: 130px;
+    background: white;
+    background: #1b233d;
+    position: relative;
+    transform: skew(-40deg);
+    box-shadow: -10px -10px 0 0 #1b233d;
+  }
+
+  .card .top-section .border::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: -15px;
+    background: rgba(255, 255, 255, 0);
+    border-top-left-radius: 10px;
+    box-shadow: -5px -5px 0 2px #1b233d;
+  }
+
+  .card .top-section::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    height: 15px;
+    width: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: -5px -5px 0 2px #1b233d;
+  }
+
+  .card .top-section .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card .top-section .icons .logo {
+    height: 100%;
+    aspect-ratio: 1;
+    padding: 7px 0 7px 15px;
+  }
+
+  .card .top-section .icons .logo .top-section {
+    height: 100%;
+  }
+
+  .card .top-section .icons .social-media {
+    height: 100%;
+    padding: 8px 15px;
+    display: flex;
+    gap: 7px;
+  }
+
+  .card .top-section .icons .social-media .svg {
+    height: 100%;
+    fill: #1b233d;
+  }
+
+  .card .top-section .icons .social-media .svg:hover {
+    fill: white;
+  }
+
+  .card .bottom-section {
+    margin-top: 15px;
+    padding: 10px 5px;
+    position: relative;
+  }
+
+  .card .bottom-section .title {
+    display: block;
+    font-size: 17px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .card .bottom-section .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .card .bottom-section .row .item {
+    flex: 30%;
+    text-align: center;
+    padding: 5px;
+    color: rgba(170, 222, 243, 0.721);
+  }
+
+  .card .bottom-section .row .item .big-text {
+    font-size: 12px;
+    display: block;
+    color: white;
+    font-weight: 700;
+  }
+
+  .card .bottom-section .row .item .regular-text {
+    font-size: 9px;
+  }
+
+  .card .bottom-section .row .item:nth-child(2) {
+    border-left: 1px solid rgba(255, 255, 255, 0.126);
+    border-right: 1px solid rgba(255, 255, 255, 0.126);
+  }
+
+  .info {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Center align the name */
+    margin: 10px 0; /* Add some vertical margin */
+  }
+
+  .logo img {
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the bottom as needed */
+    left: 0;
+    width: 40px; /* Adjust the width as needed */
+    height: auto; /* This will maintain the aspect ratio */
+  }
+
+  .echart {
+    display: block;
+    height: 100%;
+    width: 100%;
+    width: 500px;
+    height: 360px;
+  }
+
+  .card-ui {
+    width: 700px;
+    height: 900px;
+    margin: 0 auto;
+    background-color: #F8FBFE;
+    border-radius: 8px;
+    z-index: 1;
+  }
+
+  .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+  }
+
+  .circle {
+    padding: 0 4px;
+  }
+
+  .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+  }
+
+  .red {
+    background-color: #ff605c;
+  }
+
+  .yellow {
+    background-color: #ffbd44;
+  }
+
+  .green {
+    background-color: #00ca4e;
+  }
+
+  .card__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .charts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+  }
+
+  .echart {
+    flex: 1;
+    min-width: 0;
+    height: 400px; /* Adjust the height as needed */
+    margin-right: 10px;
+  }
+
+  .echart:last-child {
+    margin-right: 0;
+  }
+
+  .table-container {
+    max-height: 300px; /* Set a max-height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+  }
+
+  .worker-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .worker-table th, .worker-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .worker-table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+
+  .worker-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  a {
+    color: rgba(255, 255, 255, 0.692);
+    padding: 10px 15px;
+    display: flex;
+    height:50px;
+    width:50px;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.397);
+    background: rgba(255, 255, 255, 0.068);
+    overflow: hidden;
+    font-size: 0.9rem;
+    font-weight: 600;
+    gap: 8px;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: 0.2s;
+    border: 1px solid transparent;
+  }
+
+  a:hover {
+    border-color: rgba(255, 255, 255, 0.623);
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.144),
+        rgba(255, 255, 255, 0.247),
+        rgba(255, 255, 255, 0.39)
+    );
+    box-shadow: 0 6px rgba(255, 255, 255, 0.623);
+    transform: translateY(-6px);
+  }
+
+  a:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  .average-charge {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .average-label {
+    color: #333;
+    margin-right: 5px;
+  }
+
+  .average-value {
+    color: #007bff; /* Blue color */
+  }
+  .red {
+    color: red;
+  }
+
+  .blue {
+    color: blue;
+  }
+
+  .green {
+    color: green;
+  }
+
+}

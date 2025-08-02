@@ -1,0 +1,14 @@
+
+-
+java:S2176"Rename this class.(ƒ•Ÿ³úÿÿÿÿ
+l
+java:S1128"QRemove this unused import 'org.springframework.context.annotation.Configuration'.(¬²Úäþÿÿÿÿ
+v
+java:S1128"[Remove this unused import 'org.springframework.web.servlet.config.annotation.CorsRegistry'.(âÁ’©þÿÿÿÿ
+z
+java:S1128"_Remove this unused import 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer'.(’µ¥Êÿÿÿÿÿ
+|
+java:S1128"fRemove this unused import 'org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter'.(Ùõ’ß
+4
+java:S1128
+"Remove this duplicated import.(‚î‰Þ

@@ -1,0 +1,256 @@
+@import '../../../assets/style/setup/vars';
+
+.email-folder-list {
+    background-color: #a3baee;
+
+    &.full {
+        width: $nav-width;
+
+    }
+
+    &:not(.full) {
+        .ifFull {
+            display: none;
+        }
+    }
+}
+
+.email-folder-list>* {
+    cursor: pointer;
+
+    &:not(.compose-wrapper) {
+        margin-bottom: 10px;
+    }
+}
+
+
+.compose-wrapper {
+    height: 56px;
+    width: 56px;
+    margin: 8px 8px 16px;
+    background: inherit;
+
+    .full & {
+        width: 142px;
+    }
+}
+
+
+
+.compose {
+
+    background-color: #c2e7ff;
+    font-size: 0.875em;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 #0000, 0 1px 3px 1px #0000;
+    line-height: 2em;
+    border-radius: 16px;
+    justify-content: center;
+
+    .full & {
+        justify-content: flex-start;
+    }
+
+    img {
+
+        height: 24px;
+        width: 24px;
+        margin-inline: 16px;
+    }
+
+}
+
+
+
+.compose:hover {
+    box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+}
+
+.folders-nav {
+    background-color: inherit;
+    height: calc(100vh - $header-height - 80px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        height: 8px;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+        border: none;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(32, 33, 36, 0.38);
+    }
+}
+
+.folders-nav>* {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    font-size: 14px;
+    background-color: inherit;
+    width: 32px;
+    justify-content: center;
+    margin: auto;
+
+
+    .full & {
+        padding: 0 12px 0 26px;
+
+        justify-content: unset;
+        align-items: center;
+        width: 240px;
+        padding: 0 12px 0 26px;
+        margin: 0;
+    }
+
+    &:not(.label-header):not(.active):hover {
+        background-color: #ebebeb;
+        border-radius: 20px;
+
+        .full & {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    &.active {
+        background-color: #d3e3fd;
+        border-radius: 20px;
+        color: #001d35;
+
+        .full & {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        font-weight: bold;
+    }
+}
+
+.f-text {
+    margin-inline-start: 18px;
+}
+
+.labels {
+    margin-top: 45px;
+
+    padding-inline-start: 25px;
+}
+
+.label-header {
+    width: 100%;
+    margin-top: 28px;
+    cursor: default;
+
+    .full & {
+        justify-content: space-between !important;
+    }
+
+    img {
+        cursor: pointer;
+    }
+}
+
+.label-header h4 {
+    // display: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.label {
+
+    .actions img {
+        opacity: 0;
+        margin-inline-start: 5px;
+        transition: .1s;
+    }
+
+    &:hover .actions img {
+        opacity: .7;
+
+    }
+
+    &.active {
+        background-color: #e1e3e1 !important;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .full & {
+        justify-content: space-between !important;
+    }
+}
+
+
+@media (max-width:900px) {
+    .email-folder-list.full {
+        box-shadow: 2px 10px 10px 0 rgba(134, 134, 134, 0.545);
+        position: absolute;
+        z-index: 30;
+    }
+}
+
+@media (min-width:900px) {
+
+    .email-folder-list:not(.full):hover {
+        width: $nav-width;
+        box-shadow: 2px 10px 10px 0 rgba(134, 134, 134, 0.545);
+        position: absolute;
+        z-index: 30;
+
+        .compose-wrapper {
+            width: 142px;
+        }
+
+        .compose {
+            justify-content: flex-start;
+        }
+
+        .folders-nav>* {
+            padding: 0 12px 0 26px;
+
+            justify-content: unset;
+            align-items: center;
+            width: 240px;
+            padding: 0 12px 0 26px;
+            margin: 0;
+
+            &:not(.label-header):not(.active):hover {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            &.active {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        .label,
+        .label-header {
+            justify-content: space-between !important;
+        }
+
+        .ifFull {
+            display: flex;
+        }
+    }
+
+    .place-holder {
+        position: relative;
+        min-width: 72px;
+    }
+}

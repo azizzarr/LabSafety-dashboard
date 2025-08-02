@@ -1,0 +1,18 @@
+
+b
+java:S1192*"GDefine a constant instead of duplicating this literal "alerts" 6 times.(Á˜¹Åúÿÿÿÿ
+Z
+java:S2259¯"CA "NullPointerException" could be thrown; "alert" is nullable here.(œ£»–
+N
+java:S2589°"7Remove this expression which always evaluates to "true"(ÓøŒÍ
+g
+java:S1128"LRemove this unused import 'com.google.firebase.messaging.FirebaseMessaging'.(Ë¾Òªşÿÿÿÿ
+]
+java:S1128"GRemove this unused import 'com.google.firebase.messaging.Notification'.(‡ğË
+J
+java:S1128
+"4Remove this unused import 'tn.esprit.entities.User'.(œõö
+]
+java:S1128"BRemove this unused import 'com.google.firebase.messaging.Message'.(ÉÓ»óúÿÿÿÿ
+Z
+java:S1128"DRemove this unused import 'java.util.concurrent.ExecutionException'.(¡£ØÍ

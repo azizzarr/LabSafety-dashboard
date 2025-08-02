@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" th="http://www.thymeleaf.org">
+<head>
+  <title>Attestation de Présence Universitaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .content {
+      margin-top: 20px;
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h1 style="text-align: center;">Attestation de Présence Universitaire</h1>
+  <div class="content">
+    <p>Nous, soussignés, attestons par la présente que l'étudiant(e) :</p>
+    <p>Nom de l'Étudiant :<strong th:text="${student.firstname}"></strong> </p>
+    <p><strong>Matricule :</strong> 123456</p>
+    <p>est inscrit(e) à l'Université Exemple depuis le :</p>
+    <p><strong>Date d'Inscription :</strong> 15 Septembre 2023</p>
+    <p>et est actuellement inscrit(e) pour le programme :</p>
+    <p><strong>Programme :</strong> Licence en Informatique</p>
+    <p>avec une spécialisation en :</p>
+    <p><strong>Spécialisation :</strong> Développement Web</p>
+    <p>Cette attestation est délivrée pour servir et valoir ce que de droit.</p>
+  </div>
+  <div class="signature">
+    <p>Fait le : <strong th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"></strong></p>
+    <p>Signature du Responsable</p><br>
+    <img align="center" border="0" src="https://jaoguinee.com/archive/wp-content/uploads/2022/05/cachet-Directeur-General.jpg" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 55%;max-width: 319px;" width="319" class="v-src-width v-src-max-width"/>
+
+  </div>
+</div>
+</body>
+
+</html>

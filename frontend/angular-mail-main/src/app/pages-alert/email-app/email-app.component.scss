@@ -1,0 +1,14 @@
+@import '../../../assets/style/setup/_vars.scss';
+
+main {
+  display: flex;
+  padding-inline-end: 16px;
+  height: 100vh;
+  background-color: #a3baee;; /* Replace with your desired background color */
+
+  .main-container {
+    width: 100%;
+    height: calc(100vh - $header-height - 16px);
+  }
+}
+

@@ -1,0 +1,26 @@
+
+§
+java:S4449ú"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(Ø Ì8œˆ ş1
+]
+java:S46841"@Replace this persistent entity with a simple POJO or DTO object.(Ò…øß8æ…‘´‹2
+X	java:S125,"<This block of commented-out lines of code should be removed.(îóãé8è…‘´‹2
+\
+java:S11176":Rename "logger" which hides the field declared at line 42.(®ù–“ùÿÿÿÿ8ë…‘´‹2
+X	java:S125<"<This block of commented-out lines of code should be removed.(Âƒ«Ñ8ğ…‘´‹2
+b
+java:S4684i"@Replace this persistent entity with a simple POJO or DTO object.(ş¢ß±ıÿÿÿÿ8¯ˆ ş1
+H	java:S106Ø"+Replace this use of System.out by a logger.(©†Ë8Åˆ ş1
+c
+java:S4684õ"@Replace this persistent entity with a simple POJO or DTO object.(É¸ˆ©ûÿÿÿÿ8Ìˆ ş1
+[
+java:S1128">Remove this unused import 'tn.esprit.Interfaces.IUserService'.(ŸÏÍ­8Üˆ ş1
+d
+java:S1128"BRemove this unused import 'tn.esprit.repositories.UserRepository'.(ÀÑëœøÿÿÿÿ8©†‘´‹2
+c
+java:S1128"ARemove this unused import 'tn.esprit.security.jwtUtils.JwtUtils'.(÷¯“øÿÿÿÿ8ª†‘´‹2
+b
+java:S1128"FRemove this unused import 'javax.persistence.EntityNotFoundException'.(©ÿ€8ª†‘´‹2
+R
+java:S1128"0Remove this unused import 'java.time.DayOfWeek'.(Óò»¸şÿÿÿÿ8İˆ ş1
+L
+java:S1068*"*Remove this unused "logger" private field.(âêû¦ùÿÿÿÿ8¬†‘´‹2

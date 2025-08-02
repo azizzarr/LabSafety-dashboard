@@ -1,0 +1,19 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñ½·Ë8ïš×èß1
+W	java:S125"<This block of commented-out lines of code should be removed.(ÉÉ‰%8Ï–ìÝà1
+X	java:S125"<This block of commented-out lines of code should be removed.(ì•¯ì8Ð–ìÝà1
+]	java:S125"<This block of commented-out lines of code should be removed.(Ð¨ðôûÿÿÿÿ8Ð–ìÝà1
+X	java:S125!"<This block of commented-out lines of code should be removed.(˜äÈµ8Ð–ìÝà1
+X	java:S125$"<This block of commented-out lines of code should be removed.(ÜÄ²ý8Ñ–ìÝà1
+X	java:S125&"<This block of commented-out lines of code should be removed.(ÛÆÚ8Ñ–ìÝà1
+X	java:S125)"<This block of commented-out lines of code should be removed.(ÙˆØë8˜ç›Óá1
+]	java:S1257"<This block of commented-out lines of code should be removed.(î—¦šûÿÿÿÿ8¿ñÒŠá1
+X	java:S125="<This block of commented-out lines of code should be removed.(Îèð¹8–¯«á1
+n
+java:S1128"LRemove this unused import 'org.springframework.web.multipart.MultipartFile'.(ôŸœžÿÿÿÿÿ8Þ‡¢ßà1
+\
+java:S1128":Remove this unused import 'tn.esprit.entities.Permission'.(ð«éåýÿÿÿÿ8Û–ìÝà1
+`
+java:S1128">Remove this unused import 'tn.esprit.entities.UserPermission'.(™ º§úÿÿÿÿ8Û–ìÝà1
+Q
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëÝüÿÿÿÿ8Ü–ìÝà1

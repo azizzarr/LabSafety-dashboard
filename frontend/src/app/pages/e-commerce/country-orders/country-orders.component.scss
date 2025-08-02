@@ -1,0 +1,72 @@
+@import '../../../@theme/styles/themes';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import '@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+
+  nb-card-body {
+    display: flex;
+    height: 100%;
+    padding: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    nb-card-body {
+      flex-direction: column;
+    }
+  }
+  .pie-container {
+    display: flex;
+    justify-content: center; /* Center the pie chart horizontally */
+    align-items: center; /* Center the pie chart vertically */
+    height: 200%; /* Ensure the container takes full height */
+  }
+  ngx-d3-advanced-pie {
+    width: 200%; /* Make the pie chart take the full width of its container */
+    min-width: 1000px; /* Limit the maximum width of the pie chart */
+    height: 200%; /* Make the pie chart take the full height of its container */
+    min-height: 500px; /* Limit the maximum height of the pie chart */
+  }
+  ngx-d3-bar,
+  ngx-d3-pie,
+  ngx-d3-advanced-pie,
+  ngx-d3-area-stack,
+  ngx-d3-line,
+  ngx-d3-polar {
+    display: block;
+    width: 100%;
+    // height: nb-theme(card-height-medium);
+    height: 150%;
+    ::ng-deep {
+      .pie-label {
+        fill: nb-theme(text-basic-color);
+      }
+
+      text {
+        fill: nb-theme(text-hint-color);
+      }
+
+      .chart-legend {
+        .legend-labels {
+          background: nb-theme(background-basic-color-2);
+        }
+        .legend-label {
+          color: nb-theme(text-hint-color);
+          .active .legend-label-text {
+            color: nb-theme(text-basic-color);
+          }
+        }
+      }
+
+      .total-value,
+      .item-value,
+      .item-percent {
+        line-height: 1.5;
+      }
+
+      .legend-items {
+        overflow-y: hidden;
+      }
+    }
+  }
+}

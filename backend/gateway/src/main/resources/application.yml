@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+      import-check:
+        enabled: false
+
+server:
+  port: 8033
+
+
+  // hedhi el config el kol ena edtha w najem nahiha baad

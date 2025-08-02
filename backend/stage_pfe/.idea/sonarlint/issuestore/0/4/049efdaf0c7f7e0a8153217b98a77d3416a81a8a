@@ -1,0 +1,25 @@
+
+l
+java:S1192\"ODefine a constant instead of duplicating this literal "User not found" 4 times.(–ûƒ§8Õ¼¨®â1
+€
+java:S1488Ò"bImmediately return this expression instead of assigning it to the temporary variable "savedUsers".(Ó§Áæ8×¼¨®â1
+a
+java:S1854">Remove this useless assignment to local variable "permission".(ïâ¡Æùÿÿÿÿ8Ó½¨®â1
+R
+java:S1481"/Remove this unused "permission" local variable.(ïâ¡Æùÿÿÿÿ8Ô½¨®â1
+a
+java:S1854Ï">Remove this useless assignment to local variable "permission".(ïâ¡Æùÿÿÿÿ8Ö½¨®â1
+^	java:S125¦"<This block of commented-out lines of code should be removed.(³÷¢ˆûÿÿÿÿ8×½¨®â1
+^	java:S125·"<This block of commented-out lines of code should be removed.(³÷¢ˆûÿÿÿÿ8×½¨®â1
+R
+java:S1481Ï"/Remove this unused "permission" local variable.(ïâ¡Æùÿÿÿÿ8×½¨®â1
+H	java:S106®"+Replace this use of System.out by a logger.(Äâ´­8â½¨®â1
+M	java:S106µ"+Replace this use of System.out by a logger.(í•·Êüÿÿÿÿ8â½¨®â1
+Y
+java:S1117ƒ"<Rename "jwtUtils" which hides the field declared at line 52.(ªÌ§P8‚è±®â1
+H	java:S106”"+Replace this use of System.err by a logger.( ê†¡8…è±®â1
+^	java:S125¥"<This block of commented-out lines of code should be removed.(ÝÀ´àýÿÿÿÿ8¥¾¨®â1
+^	java:S125´"<This block of commented-out lines of code should be removed.(êï÷åüÿÿÿÿ8¥¾¨®â1
+Y	java:S125¿"<This block of commented-out lines of code should be removed.(ð³ÖŽ8¥¾¨®â1
+G
+java:S1068*"*Remove this unused "logger" private field.(È½ÓÉ8¦¾¨®â1

@@ -1,0 +1,167 @@
+<!--<nb-card>
+  <nb-card-header>{{ title }}</nb-card-header>
+  <nb-card-body>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis tincidunt tincidunt.
+    <div echarts [options]="options" class="echart"></div>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton hero status="primary" (click)="dismiss()">Dismiss Dialog</button>
+  </nb-card-footer>
+</nb-card>
+-->
+<!--<nb-card>
+  <nb-card-header>
+    <div class="mydict">
+      <div>
+        <label>
+          <input type="radio" name="radio" checked="">
+          <span>Maintenance</span>
+        </label>
+        <label>
+          <input type="radio" name="radio">
+          <span>Test</span>
+        </label>
+        <label>
+          <input type="radio" name="radio">
+          <span>Methode</span>
+        </label>
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+  <table class="table">
+      <thead>
+      <tr>
+        <th>Matricule</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Date</th>
+        <th>ChargeEsd</th>
+        <th>Poste</th>
+        <th>Service</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let worker of workers">
+        <td>{{ worker.matricule }}</td>
+        <td>{{ worker.nom }}</td>
+        <td>{{ worker.prenom }}</td>
+        <td>{{ worker.date | date }}</td>
+        <td>{{ worker.chargeEsd }}</td>
+        <td>{{ worker.postes[0]?.name }}</td>
+        <td>{{ worker.services[0]?.name }}</td>
+      </tr>
+      </tbody>
+    </table>-->
+   <!-- <div echarts [options]="options" class="echart"></div>
+  </nb-card-body>
+
+  <nb-card-footer>
+    <button class="noselect" (click)="dismiss()"><span class="text">Close</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+  </nb-card-footer>
+</nb-card>-->
+<!--
+<div class="card" *ngFor="let worker of workers">
+    <div class="top-section">
+
+      <div class="border"></div>
+      <div class="icons">
+    </div>
+    <div class="info">
+      <div class="name">{{ worker.nom }}</div>
+      <div class="name">{{ worker.prenom }}</div>
+    </div>
+  </div>
+  <div class="bottom-section">
+    <div class="logo">
+      <img src="/assets/images/sagemcom.png" alt="Company Logo">
+    </div>
+    <span class="title">Informations</span>
+    <div class="row row1">
+      <div class="item">
+        <span class="big-text">{{ worker.matricule }}</span>
+        <span class="regular-text">Matricule</span>
+      </div>
+      <div class="item">
+        <span class="big-text">{{ worker.chargeEsd }}</span>
+        <span class="regular-text">Charge Esd</span>
+      </div>
+      <div class="item">
+        <span class="big-text">{{ worker.date  }}</span>
+        <span class="regular-text">Date</span>
+      </div>
+      <div class="item">
+        <span class="big-text">{{ worker.postes[0]?.name }}</span>
+        <span class="regular-text">Poste</span>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<a (click)="exportToPdf()"
+><svg
+  viewBox="0 0 256 256"
+  height="32"
+  width="38"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M74.34 85.66a8 8 0 0 1 11.32-11.32L120 108.69V24a8 8 0 0 1 16 0v84.69l34.34-34.35a8 8 0 0 1 11.32 11.32l-48 48a8 8 0 0 1-11.32 0ZM240 136v64a16 16 0 0 1-16 16H32a16 16 0 0 1-16-16v-64a16 16 0 0 1 16-16h52.4a4 4 0 0 1 2.83 1.17L111 145a24 24 0 0 0 34 0l23.8-23.8a4 4 0 0 1 2.8-1.2H224a16 16 0 0 1 16 16m-40 32a12 12 0 1 0-12 12a12 12 0 0 0 12-12"
+    fill="currentColor"
+  ></path></svg
+></a>
+
+<div #content>
+  <div class="card-ui">
+    <div class="tools">
+      <div class="circle">
+        <span class="red box"></span>
+      </div>
+      <div class="circle">
+        <span class="yellow box"></span>
+      </div>
+      <div class="circle">
+        <span class="green box"></span>
+      </div>
+    </div>
+    <div class="card__content">
+      <div class="title">Les informations charge ESD de matricule : {{matricule}}</div>
+      <div class="average-charge">
+        <span class="average-label">Average Charge ESD:</span>
+        <span class="average-value">{{ averageChargeEsd | number:'1.2-2' }}</span>
+      </div>
+      <div class="charts-container">
+        <div echarts [options]="options" class="echart"></div>
+        <ngx-echarts-bar-animation class="echart" [matricule]="matricule"></ngx-echarts-bar-animation>
+      </div>
+      <div class="table-container">
+        <table class="worker-table">
+          <thead>
+          <tr>
+            <th>Matricule</th>
+            <th>Date</th>
+            <th>Charge ESD</th>
+            <th>Poste</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let worker of workers">
+            <td>{{ worker.matricule }}</td>
+            <td>{{ formatDate(worker.date) }}</td>
+            <td>{{ worker.chargeEsd }}</td>
+            <td>{{ formatPostes(worker.postes) }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

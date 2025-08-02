@@ -1,0 +1,54 @@
+
+u
+java:S1192¦"WDefine a constant instead of duplicating this literal "Token is null or empty" 4 times.(ëùœ8ˆ¡­â1
+†
+java:S1192–"hDefine a constant instead of duplicating this literal "An error occurred while adding the user" 3 times.(û­©8 Á ¬â1
+’
+java:S1192Š"oDefine a constant instead of duplicating this literal "User does not have the permission to add users" 3 times.(­›´Íıÿÿÿÿ8¢Á ¬â1
+q
+java:S1192u"ODefine a constant instead of duplicating this literal "permissionName" 5 times.(­òÒ¦ÿÿÿÿÿ8˜ÊŒœâ1
+r
+java:S1192”"ODefine a constant instead of duplicating this literal "User not found" 4 times.(¬»¹©ÿÿÿÿÿ8¢Á ¬â1
+v
+java:S1192’"XDefine a constant instead of duplicating this literal "Invalid permission name" 3 times.(Ü²§»8£Á ¬â1
+{
+java:S1192"XDefine a constant instead of duplicating this literal "User added successfully" 5 times.(£¤·›øÿÿÿÿ8£Á ¬â1
+~
+java:S1488™"`Immediately return this expression instead of assigning it to the temporary variable "response".(¯›Âä8§ÊŒœâ1
+b
+java:S46849"@Replace this persistent entity with a simple POJO or DTO object.(…‘ËÁşÿÿÿÿ8‡ĞŒœâ1
+b
+java:S4684F"@Replace this persistent entity with a simple POJO or DTO object.(Ÿ†‰µûÿÿÿÿ8ˆĞŒœâ1
+]	java:S125="<This block of commented-out lines of code should be removed.(›·¤áşÿÿÿÿ8‰ĞŒœâ1
+]	java:S125M"<This block of commented-out lines of code should be removed.(³À¶Ëøÿÿÿÿ8‹ĞŒœâ1
+]
+java:S4684`"@Replace this persistent entity with a simple POJO or DTO object.(™†ÏÇ8ĞŒœâ1
+\
+java:S1854·"9Remove this useless assignment to local variable "users".(åËÑÒùÿÿÿÿ8«ĞŒœâ1
+M
+java:S1481·"*Remove this unused "users" local variable.(åËÑÒùÿÿÿÿ8­ĞŒœâ1
+X	java:S125¹"<This block of commented-out lines of code should be removed.(À™Ú*8­ĞŒœâ1
+X
+java:S1854÷":Remove this useless assignment to local variable "writer".(–…—„8ÀĞŒœâ1
+Š
+java:S1130ò"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(Ï€²8ÁĞŒœâ1
+I
+java:S1481÷"+Remove this unused "writer" local variable.(–…—„8ÆĞŒœâ1
+X
+java:S1117":Rename "logger" which hides the field declared at line 49.(¶È§“8˜Ú ¬â1
+c
+java:S1117Ğ"@Rename "objectMapper" which hides the field declared at line 50.(¡ôó‰ùÿÿÿÿ8©Ú ¬â1
+]
+java:S4684æ"@Replace this persistent entity with a simple POJO or DTO object.(ûôŠ8çÁ¶°â1
+X
+java:S1117è":Rename "logger" which hides the field declared at line 49.(Úƒó¶8ÆÃ®â1
+s
+java:S1128"VRemove this unused import 'org.springframework.security.core.userdetails.UserDetails'.(ÊÁ¥8ëÁ¶°â1
+n
+java:S1128"LRemove this unused import 'org.springframework.web.multipart.MultipartFile'.(ôŸœÿÿÿÿÿ8ëÁ¶°â1
+\
+java:S1128":Remove this unused import 'tn.esprit.entities.Permission'.(ğ«éåıÿÿÿÿ8ëÁ¶°â1
+`
+java:S1128">Remove this unused import 'tn.esprit.entities.UserPermission'.(™ º§úÿÿÿÿ8ëÁ¶°â1
+Q
+java:S1128%"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ìÁ¶°â1

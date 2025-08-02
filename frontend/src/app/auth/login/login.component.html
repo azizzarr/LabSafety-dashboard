@@ -1,0 +1,77 @@
+<div class="container" background-colour="black">
+  <div class="login-container" >
+    <h1 id="title" class="title">Login</h1>
+    <p class="sub-title">Hello! Log in with your username.</p>
+
+    <form [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+      <div class="form-group">
+        <label class="form-control-label">Username</label>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Enter your email address"
+          formControlName="username"
+        />
+      </div>
+      <div class="form-group">
+        <label class="form-control-label">Password</label>
+        <div class="pass-group">
+          <input
+            type="{{ show ? 'text' : 'password' }}"
+            class="form-control"
+            placeholder="Enter your password"
+            formControlName="password"
+          />
+          <span>
+            <i-feather
+              name="eye"
+              class="toggle-password feather-eye"
+              (click)="show = !show"
+              *ngIf="show"
+            ></i-feather>
+          </span>
+          <span>
+            <i-feather
+              name="eye-off"
+              class="toggle-password feather-eye-off"
+              (click)="show = !show"
+              *ngIf="!show"
+            ></i-feather>
+          </span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col">
+          <a class="text-link" routerLink="../ngx-app-verification-code">Forgot Password?</a>
+        </div>
+        <div class="col-auto">
+          <div class="form-check remember-me">
+            <input class="form-check-input input-box" type="checkbox" id="rememberMe" name="rememberMe">
+            <label class="form-check-label" for="rememberMe">Remember me</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-grid">
+        <button class="animated-button" type="submit">
+          <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+            ></path>
+          </svg>
+          <span class="text">Sign in</span>
+          <span class="circle"></span>
+          <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </form>
+
+    <section class="another-action" aria-label="Register">
+      Don't have an account? <a class="text-link" routerLink="../register">Register</a>
+    </section>
+  </div>
+</div>

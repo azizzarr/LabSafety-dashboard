@@ -1,0 +1,98 @@
+<!--<nb-card>
+  <nb-card-header>{{ title }}</nb-card-header>
+  <nb-card-body>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis tincidunt tincidunt.
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton hero status="primary" (click)="dismiss()">Dismiss Dialog</button>
+  </nb-card-footer>
+</nb-card>-->
+<nb-card>
+  <nb-card-header>
+    <div class="mydict">
+      <div>
+        <label>
+          <input type="radio" name="radio" checked="">
+          <span>Maintenance</span>
+        </label>
+        <label>
+          <input type="radio" name="radio">
+          <span>Test</span>
+        </label>
+        <label>
+          <input type="radio" name="radio">
+          <span>Methode</span>
+        </label>
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Matricule</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Date</th>
+        <th>ChargeEsd</th>
+        <th>Poste</th>
+        <th>Service</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let worker of workers">
+        <td>{{ worker.matricule }}</td>
+        <td>{{ worker.nom }}</td>
+        <td>{{ worker.prenom }}</td>
+        <td>{{ formatDate(worker.date) }}</td>
+        <td>{{ worker.chargeEsd }}</td>
+        <td>{{ worker.postes[0]?.name }}</td>
+        <td>{{ worker.services[0]?.name }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+
+  <nb-card-footer>
+    <button class="noselect" (click)="dismiss()"><span class="text">Close</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+  </nb-card-footer>
+</nb-card>
+<!--
+<div class="card" *ngFor="let worker of workers">
+    <div class="top-section">
+
+      <div class="border"></div>
+      <div class="icons">
+    </div>
+    <div class="info">
+      <div class="name">{{ worker.nom }}</div>
+      <div class="name">{{ worker.prenom }}</div>
+    </div>
+  </div>
+  <div class="bottom-section">
+    <div class="logo">
+      <img src="/assets/images/sagemcom.png" alt="Company Logo">
+    </div>
+    <span class="title">Informations</span>
+    <div class="row row1">
+      <div class="item">
+        <span class="big-text">{{ worker.matricule }}</span>
+        <span class="regular-text">Matricule</span>
+      </div>
+      <div class="item">
+        <span class="big-text">{{ worker.chargeEsd }}</span>
+        <span class="regular-text">Charge Esd</span>
+      </div>
+      <div class="item">
+        <span class="big-text">{{ worker.date  }}</span>
+        <span class="regular-text">Date</span>
+      </div>
+      <div class="item">
+        <span class="big-text">{{ worker.postes[0]?.name }}</span>
+        <span class="regular-text">Poste</span>
+      </div>
+    </div>
+  </div>
+</div>
+-->

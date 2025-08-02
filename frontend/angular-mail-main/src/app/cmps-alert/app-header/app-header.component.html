@@ -1,0 +1,25 @@
+<section class="app-header flex space-between align-center">
+    <div class="sub1 full-height flex align-center">
+        <div class="menu-wrapper flex ">
+            <header-svg [icon]="'menu'" (click)="menuToggle.emit()"></header-svg>
+        </div>
+
+        <img routerLink="/email" class=""
+            src="https://upload.wikimedia.org/wikipedia/fr/c/cc/LOGO_SAGEMCOM.png" alt="">
+    </div>
+
+    <div class="sub2 grow">
+        <search-input (search)="setFilter($event)"></search-input>
+    </div>
+
+    <div class="sub3 flex align-center">
+        <div class="sub3-wrapper flex align-center ">
+            <header-svg [icon]="'help'"></header-svg>
+        </div>
+        <div class="sub3-wrapper flex ">
+            <header-svg [icon]="'settings'"></header-svg>
+        </div>
+
+    </div>
+
+</section>

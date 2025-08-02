@@ -1,0 +1,92 @@
+
+<h1 id="title" class="title">Register</h1>
+
+<nb-alert *ngIf="showMessages.error && errors?.length && !submitted" outline="danger" role="alert">
+  <p class="alert-title"><b>Oh snap!</b></p>
+  <ul class="alert-message-list">
+    <li *ngFor="let error of errors" class="alert-message">{{ error }}</li>
+  </ul>
+</nb-alert>
+
+<nb-alert *ngIf="showMessages.success && messages?.length && !submitted" outline="success" role="alert">
+  <p class="alert-title"><b>Hooray!</b></p>
+  <ul class="alert-message-list">
+    <li *ngFor="let message of messages" class="alert-message">{{ message }}</li>
+  </ul>
+</nb-alert>
+
+<form (ngSubmit)="onSubmit()">
+  <!-- Username -->
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="username" required>
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required>
+  </div>
+
+  <!-- Password with toggle button -->
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="{{ show ? 'password' : 'text' }}" class="form-control" id="password" [(ngModel)]="user.password" name="password" required>
+    <button type="button" class="btn btn-link password-toggle" (click)="onClick()">{{ show ? 'Show' : 'Hide' }}</button>
+  </div>
+
+
+  <div class="form-group">
+    <label for="role">Role</label>
+    <select class="form-control" id="role" [(ngModel)]="selectedRole" name="role" required>
+      <option *ngFor="let role of roles" [ngValue]="role">{{ role.name }}</option>
+    </select>
+  </div>
+
+
+
+  <!-- Submit button -->
+<!--  <button type="submit" class="btn btn-primary"  >Submit</button>-->
+  <button class="animated-button" type="submit">
+    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+      ></path>
+    </svg>
+    <span class="text">Sign in</span>
+    <span class="circle"></span>
+    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+      ></path>
+    </svg>
+  </button>
+</form>
+
+<section *ngIf="socialLinks && socialLinks.length > 0" class="links" aria-label="Social sign in">
+  or enter with:
+  <div class="socials">
+    <ng-container *ngFor="let socialLink of socialLinks">
+      <a *ngIf="socialLink.link"
+         [routerLink]="socialLink.link"
+         [attr.target]="socialLink.target"
+         [attr.class]="socialLink.icon"
+         [class.with-icon]="socialLink.icon">
+        <nb-icon *ngIf="socialLink.icon; else title" [icon]="socialLink.icon"></nb-icon>
+        <ng-template #title>{{ socialLink.title }}</ng-template>
+      </a>
+      <a *ngIf="socialLink.url"
+         [attr.href]="socialLink.url"
+         [attr.target]="socialLink.target"
+         [attr.class]="socialLink.icon"
+         [class.with-icon]="socialLink.icon">
+        <nb-icon *ngIf="socialLink.icon; else title" [icon]="socialLink.icon"></nb-icon>
+        <ng-template #title>{{ socialLink.title }}</ng-template>
+      </a>
+    </ng-container>
+  </div>
+</section>
+
+<section class="another-action" aria-label="Sign in">
+  Already have an account? <a class="text-link" routerLink="../ngx-app-login">Log in</a>
+</section>

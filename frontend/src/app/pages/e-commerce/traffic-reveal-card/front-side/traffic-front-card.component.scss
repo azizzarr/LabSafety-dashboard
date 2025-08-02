@@ -1,0 +1,157 @@
+@import 'bootstrap/scss/mixins/breakpoints';
+@import '@nebular/theme/styles/global/breakpoints';
+@import '../../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  overflow: auto;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > * {
+      flex: 1;
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .delta {
+    display: flex;
+    align-items: center;
+
+    &.down {
+      color: nb-theme(color-danger-default);
+    }
+
+    &.up {
+      color: nb-theme(color-success-default);
+    }
+  }
+
+  @include media-breakpoint-down(is) {
+    ngx-traffic-bar {
+      display: none;
+    }
+  }
+
+
+}
+.table-container {
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.header-row th {
+  background-color: #f0f0f0; /* Set background color */
+  color: #333; /* Set text color */
+  font-weight: bold; /* Make text bold */
+  padding: 12px; /* Add padding */
+  text-align: left; /* Align text to the left */
+  border-bottom: 2px solid #ddd; /* Add bottom border */
+}
+
+.header-row th:first-child {
+  border-top-left-radius: 8px; /* Rounded corners for the first header cell */
+}
+
+.header-row th:last-child {
+  border-top-right-radius: 8px; /* Rounded corners for the last header cell */
+}
+
+tr td {
+  padding: 10px; /* Add padding to table cells */
+}
+
+/* Alternate row color */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect */
+tr.hover-effect:hover {
+  background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    font-size: 14px;
+  }
+}
+
+.Btn {
+  width: 23px;
+  height: 23px;
+  background: linear-gradient(#44ea76, #39fad7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.arrow path {
+  fill: white;
+}
+
+.text {
+  font-size: 0.7em;
+  width: 100px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -18px;
+  opacity: 0;
+  transition-duration: .7s;
+}
+
+.Btn:hover .arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.lower-btn {
+  background: linear-gradient(#f74343, #fd1d1d); /* Red gradient */
+  transform: rotate(180deg); /* Rotate the button */
+}
+
+.more {
+  color: green; /* Green text for "MORE" */
+}
+
+.lower {
+  color: red; /* Red text for "LOWER" */
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

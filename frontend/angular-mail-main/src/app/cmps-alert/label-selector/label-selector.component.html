@@ -1,0 +1,18 @@
+<form class="labels-list" (click)="$event.stopPropagation()" (submit)="updateLabels()">
+    <header>Label as:</header>
+    <div class="separator" role="separator"></div>
+    <div *ngFor="let label of labels" class="label-item flex align-center">
+        <input type="checkbox" [(ngModel)]="selectionMap[label._id!]" [ngModelOptions]="{standalone: true}" />
+        <span>{{label.name}}</span>
+    </div>
+    <div *ngIf="!labels.length" class="label-item empty" >
+        No labels to show
+    </div>
+    <div class="separator" role="separator"></div>
+    <button (click)="$event.preventDefault();create.emit()">
+        Create new
+    </button>
+    <button type="submit" >
+        Apply
+    </button>
+</form>

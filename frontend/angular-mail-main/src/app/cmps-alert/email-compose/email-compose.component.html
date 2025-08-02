@@ -1,0 +1,30 @@
+<section class="email-compose fixed flex column space-between" [class.mini]="isMini" [class.full]="isFull">
+    <header class="flex space-between" (click)="isMini=!isMini">
+        <div>{{title}}</div>
+
+        <div class="flex align-center compose-controls">
+            <span title="{{isMini?'Maximize':'Minimize'}}"><img class="square-hover"
+                    src="assets/icons/{{isMini?'maximize':'minimize'}}.png"></span>
+            <span title="{{isFull?'Exit full screen':'Full screen'}}" class="square-hover"
+                (click)="$event.stopPropagation();isFull=!isFull;isMini=false"><img
+                    src="assets/icons/{{isFull?'unfull':'full'}}.png"></span>
+            <span title="Save & close" (click)="$event.stopPropagation();save(false)"><img class="square-hover"
+                    src="assets/icons/close.png"></span>
+        </div>
+    </header>
+    <main *ngIf="!isMini">
+        <form class="flex column" #form [formGroup]="composeForm" (input)="autoDrafts()">
+            <input type="email" formControlName="to" placeholder="Recipients" />
+            <input type="text" formControlName="subject" placeholder="Subject" />
+            <textarea type="text" formControlName="body"></textarea>
+        </form>
+    </main>
+
+    <footer  *ngIf="!isMini" class="flex space-between align-center">
+        <button [disabled]="composeForm.invalid" class="send-btn" (click)="save()">Send</button>
+        <span class="delete pointer grey-hover" (click)="close()" title="Discard draft">
+            <img src="assets/icons/trash.png">
+        </span>
+    </footer>
+</section>
+<div *ngIf="isFull&&!isMini" class="back-screen" (click)="isFull=false"></div>

@@ -1,0 +1,120 @@
+<div class="container custom-bg-color">
+  <div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body">
+        <!-- Card stats -->
+      </div>
+    </div>
+  </div>
+  <!-- Page content -->
+  <div class="container-fluid mt--7">
+    <div class="row">
+      <div class="col-lg-3 order-lg-1">
+        <div class="navbar-expand-lg mb-5">
+          <!-- Navbar Toggle Button -->
+          <div class="d-grid">
+            <button type="button" class="navbar-toggler btn btn-white mb-3" data-bs-toggle="collapse"
+                    data-bs-target="#navbarVerticalNavMenuEg1"
+                    aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarVerticalNavMenuEg1">
+              <span class="d-flex justify-content-between align-items-center">
+                <span class="text-dark">Filter</span>
+                <span class="navbar-toggler-default">
+                  <i class="bi-list"></i>
+                </span>
+                <span class="navbar-toggler-toggled">
+                  <i class="bi-x"></i>
+                </span>
+              </span>
+            </button>
+          </div>
+          <!-- Navbar Collapse -->
+          <div id="navbarVerticalNavMenuEg1" class="collapse navbar-collapse">
+            <div class="w-100">
+              <!-- Filter Form -->
+              <div>
+                <div class="filters-container">
+                  <!-- Action, Access, Permission Filters -->
+                  <div *ngFor="let filter of filters" class="filter-section mb-5">
+                    <h5 class="filter-title mb-3">{{ filter.type }}</h5>
+                    <div class="filter-options d-grid gap-2">
+                      <div class="form-check" *ngFor="let value of filter.values">
+                        <input class="form-check-input" type="checkbox" [value]="value" id="{{ 'filter' + value }}"
+                               (change)="toggleFilter(filter.type, value)"
+                               [checked]="selectedFilters[filter.type] === value">
+                        <label class="form-check-label" [for]="'filter' + value">{{ value }}</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Clear All Button -->
+                  <div class="d-grid">
+                    <button type="button" class="btn btn-white btn-transition" (click)="clearFilters()">Clear all</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9 order-lg-2">
+        <div class="card shadow">
+          <div class="card-header border-0">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <h3 class="mb-0">Historique</h3>
+                <div class="mydict">
+                  <div>
+                    <label>
+                      <input type="radio" name="radio" value="Today" checked>
+                      <span>Today</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="radio" value="Last Week">
+                      <span>Last Week</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="radio" value="Last Month">
+                      <span>Last Month</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center">
+                <!-- Placeholder for any additional filters -->
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="search">
+                  <input placeholder="Search..." type="text" [(ngModel)]="searchQuery">
+                  <button type="submit" class="ml-2" (click)="search()">Go</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush" style="width: 100%;">
+              <!-- Table header -->
+              <thead class="thead-light">
+              <tr>
+                <th scope="col">Acteur</th>
+                <th scope="col">Action</th>
+                <th scope="col">Date</th>
+                <th scope="col">Details</th>
+              </tr>
+              </thead>
+              <!-- Table body -->
+              <tbody>
+              <tr *ngFor="let auditlog of pagedLogs">
+                <td>{{ auditlog.username }}</td>
+                <td>{{ auditlog.action }}</td>
+                <td>{{ formatDate(auditlog.timestamp) }}</td>
+                <td>{{ auditlog.details }}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <mat-paginator [pageSize]="pageSize" [pageIndex]="currentPage - 1" [length]="totalLogs" (page)="pageChanged($event)"></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

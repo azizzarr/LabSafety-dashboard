@@ -1,0 +1,13 @@
+
+a
+java:S1128"KRemove this unused import 'org.springframework.context.annotation.Primary'.(“ð›ß
+^
+java:S1128"CRemove this unused import 'springfox.documentation.service.ApiKey'.(ûƒ¯äÿÿÿÿÿ
+j
+java:S1128"ORemove this unused import 'springfox.documentation.service.AuthorizationScope'.(Ã·Ýùøÿÿÿÿ
+d
+java:S1128"NRemove this unused import 'springfox.documentation.service.SecurityReference'.(¹À«ý
+n
+java:S1128"YRemove this unused import 'springfox.documentation.spi.service.contexts.SecurityContext'.(³ã¼
+B
+java:S1144#",Remove this unused private "apiInfo" method.(Áÿš“
